@@ -19,5 +19,21 @@ public class UkuranFile {
     //int ukuranByte = 322225472;
     //error:  integer number too large karena 322122572 melebihi batas maksismum int.
 
+        // 1024.0 digunakan agar pembagian menghasilkan nilai double dan pecahan tidak hilang.
+        double ukuranKB = ukuranByte / SATU_KB;
+
+        // Konversi dari KB ke MB
+        double ukuranMB = ukuranKB / SATU_KB;
+
+        // Konversi dari MB ke GB
+        double ukuranGB = ukuranMB / SATU_KB;
+
+        // Konversi double ke int secara eksplisit.
+        // Bagian pecahan akan hilang karena int hanya menyimpan bilangan bulat.
+        int ukuranMBBulat = (int) ukuranMB;
+
+        // Menghitung selisih antara ukuran MB asli dengan MB yang sudah dibulatkan.
+        double selisihPembulatan = ukuranMB - ukuranMBBulat;
+
 
 
