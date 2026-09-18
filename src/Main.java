@@ -35,5 +35,18 @@ public class UkuranFile {
         // Menghitung selisih antara ukuran MB asli dengan MB yang sudah dibulatkan.
         double selisihPembulatan = ukuranMB - ukuranMBBulat;
 
+        // Menampilkan hasil
+        System.out.println();
+        System.out.println("===== UKURAN FILE =====");
+        System.out.println(namaFile);
+        System.out.println("  " + ukuranByte + " byte");
+        System.out.println("  " + ukuranKB + " KB");
+        System.out.println("  " + ukuranMB + " MB");
+        System.out.println("  " + ukuranGB + " GB");
+        System.out.println();
+        System.out.println("Dibulatkan ke MB  : " + ukuranMBBulat);
+        System.out.println("Selisih pembulatan: " + selisihPembulatan);
 
+        scanner.close();
+    }
 
